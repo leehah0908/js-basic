@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var inteager = 100;
+            var float = 3.14;
+
+            // 타입 확인 -> typeof
+            console.log(typeof inteager);
+            console.log(typeof float);
+
+            // 에러는 나지 않지만 Infinity는 활용하기 힘든 상징적인 값이기 때문에 왠만하면 안보이게 해줘야함
+            console.log(30 / 0);
+
+            console.log(10 / 4); // 2.5
+
+            // 잘못된 연산이나 표현할 수 없는 값의 결과
+            console.log(10 / "hello"); // NaN
+
+            console.log("=======================================");
+
+            var greetings = "안녕";
+            greetings = '굿모닝'; // 주로 사용함
+            greetings = `반갑습니다`; // 템플릿 리터럴 문법 적용시
+        </script>
+    </body>
+</html>
