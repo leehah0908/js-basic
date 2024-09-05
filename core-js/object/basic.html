@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 강아지 정보를 저장할 객체 생성
+            var dog = {
+                name: "꼬미",
+                kind: "말티즈",
+                age: 3,
+                favorite: ["산책", "간식"],
+                bark: function () {
+                    console.log("월월");
+                },
+            };
+
+            console.log(dog.name);
+            console.log(dog.age);
+            console.log(dog.favorite);
+
+            var cat = {
+                name: "대박이",
+                kind: "먼치킨",
+                age: 2,
+                favorite: ["츄르", "비닐"],
+                injection: true,
+            };
+
+            console.log(cat.name);
+            console.log(cat.age);
+            console.log(cat.favorite);
+            console.log(cat.injection);
+
+            var 게시판글 = {
+                글번호: 11,
+                작성자: {
+                    계정명: "abc",
+                    닉네임: "깜찍이",
+                    가입일자: "2023-12-12",
+                },
+                글내용: "ㅇㄹㅁㄴㅇㄹㅁㄴㄹ",
+                작성일자: "2024-03-26",
+            };
+
+            console.log("================================");
+            console.log(dog.name);
+            console.log(dog["name"]);
+
+            // 프로퍼티 수정 (기존 키로 접근해서 값을 대입)
+            dog.age = 4;
+            cat.favorite[1] = "캣닢";
+
+            console.log(dog);
+            console.log(cat);
+
+            console.log("================================");
+            // 프로퍼티 동적 추가 (기존에 없는 key로 접근)
+            cat.friend = "집사";
+            console.log(cat);
+
+            // 프로퍼티 삭제
+            delete cat.friend
+            console.log(cat);
+
+        </script>
+    </body>
+</html>

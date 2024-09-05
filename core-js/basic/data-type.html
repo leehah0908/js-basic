@@ -25,8 +25,43 @@
             console.log("=======================================");
 
             var greetings = "안녕";
-            greetings = '굿모닝'; // 주로 사용함
+            greetings = "굿모닝"; // 주로 사용함
             greetings = `반갑습니다`; // 템플릿 리터럴 문법 적용시
+
+            // 템플릿 리터럴: 백틱(``)으로 감싼 문자열
+            // 공백과 들여쓰기, 줄 개행 등을 모두 문자열로 인정해줌
+            var tag = '<ul>\n\t<li>\n\t\t<a href="">Home</a>\n\t</li>\n</ul>';
+
+            tag = `        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+        </ul>`;
+            console.log(tag);
+
+            var month = 12;
+            var day = 25;
+            var anni = "크리스마스";
+
+            console.log(month + "월 " + day + "일은 " + anni + "입니다.");
+            console.log(`${month}월 ${day}일은 ${anni}입니다.`);
+
+            console.log("=======================================");
+            var apple = 3;
+
+            if (apple) {
+                console.log(`사과가 ${apple}개 있습니다.`);
+            } else {
+                console.log("사과가 하나도 없습니다.");
+            }
+
+            // undefined
+            // 값을 할당하지 않은 변수에 암묵적으로 할당되는 값.
+            var i;
+            console.log(i);
+
+            // null
+            // 값이 의도적으로 없다는 것을 명시할 때 사용하는 값.
         </script>
     </body>
 </html>

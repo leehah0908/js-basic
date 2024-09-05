@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 1. 변수의 중복 선언을 암묵적으로 허용
+            var x = 10;
+            var x = "ddd";
+
+            console.log(x);
+
+            // var x = 10;
+            // let x = "ddd"; -> let은 중복 선언을 막아줌
+
+            // 2. 블록 레벨 스코프를 지원하지 않믐
+            for (var i = 0; i = 10; i++) {
+                console.log(i);
+            }
+        </script>
+    </body>
+</html>

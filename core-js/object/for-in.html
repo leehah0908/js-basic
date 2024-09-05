@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var phone = {
+                company: "애플",
+                color: "스페이스 그레이",
+                price: 1200000,
+                model: "아이폰 14 pro",
+            };
+
+            // 객체에서 사용하는 반복문 for-in
+            // 변수로 key값이 전달됨
+            for (var data in phone) {
+                console.log(`${data} : ${phone[data]}`);
+            }
+
+            // for-in은 배열에서도 사용 가능함
+            // 변수로 인덱스가 전달됨
+            var num = [1, 2, 3, 4, 5];
+            for (var n in num) {
+                console.log(n);
+            }
+
+            // 객체 포로퍼티 유무 확인
+            console.log("model" in phone);
+            var newKey = 'memory';
+            if (!(newKey in phone)) {
+                phone[newKey] = "32GB";
+            }
+
+            console.log(phone);
+        </script>
+    </body>
+</html>
