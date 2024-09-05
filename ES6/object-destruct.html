@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const employee = {
+                empName: "박영희",
+                age: 10,
+                hireDate: "2020-02-30",
+                birthDate: "2015-12-31",
+            };
+
+            const { empName, hireDate } = employee;
+            console.log(empName);
+            console.log(hireDate);
+
+            function foo({ empName, hireDate }) {
+                console.log(empName);
+                console.log(hireDate);
+            }
+
+            console.log('===========================');
+            const divStyle = {
+                "font-size": "18px",
+                "background-color": "red",
+            };
+
+            const { "font-size": fs, "background-color": bg } = divStyle;
+            console.log(fs);
+            console.log(bg);
+
+            console.log('===========================');
+            const dog = {
+                kind: "말티즈",
+                name: "해피",
+                age: 3,
+                injection: false,
+            };
+
+            const {kind, age:petAge, ...rest} = dog
+            console.log(kind);
+            console.log(petAge);
+            console.log(rest);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const appleBasket = [
+                {
+                    color: "green",
+                    sweet: 13,
+                },
+                {
+                    color: "red",
+                    sweet: 14,
+                },
+                {
+                    color: "red",
+                    sweet: 11,
+                },
+                {
+                    color: "green",
+                    sweet: 6,
+                },
+                {
+                    color: "green",
+                    sweet: 7,
+                },
+                {
+                    color: "green",
+                    sweet: 9,
+                },
+            ];
+
+            const totalSweet = appleBasket.reduce((total, apple) => total + apple.sweet, 0);
+
+            console.log(`사과 당도 총합: ${totalSweet}`);
+
+            // 색깔별로 사과 갯수 세기
+            const countByColor = appleBasket.reduce((count, apple) => {
+                if (apple.color in count) {
+                    count[apple.color]++;
+                } else {
+                    // 처음 나오는 값으면 1로 초기화하는 동시에 생성
+                    count[apple.color] = 1;
+                }
+                return count;
+            }, {});
+
+            // 초기값은 빈 객체.
+            // apple 객체의 color 값이 green이냐 red냐에 따라
+            // 그리고, 해당 값이 count의 프로퍼티로 존재 하는가 존재하지 않는가에 따라
+            // 프로퍼티를 추가하거나 기존 값을 하나 올리는 행위를 반복.
+            // 해당 객체를 계속 기억하게 해서 다음 회차의 apple의 color를 누적 처리.
+
+            console.log(countByColor);
+        </script>
+    </body>
+</html>

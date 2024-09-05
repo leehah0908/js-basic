@@ -33,6 +33,22 @@
             // 정상 작동은 기대하기 어려움 -> 개수와 타입을 지켜서 전달하는게 좋음
             var result2 = add(10, 15, 30);
             console.log(result2);
+
+            ///////////////////////////////////////////////////////
+
+            function operateAll(n1, n2) {
+                // return [n1+n2, n1-n2 ...];
+                return {
+                    plus: n1 + n2,
+                    minus: n1 - n2,
+                    multi: n1 * n2,
+                    divide: n1 / n2,
+                    mod: n1 % n2,
+                };
+            }
+
+            var result3 = operateAll(30, 6);
+            console.log(result3);
         </script>
     </body>
 </html>

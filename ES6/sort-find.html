@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const fruits = ["banana", "apple", "mango"];
+            fruits.sort();
+            console.log(fruits);
+
+            const numbers = [10, 2, 5, 1];
+            // numbers.sort()
+            // console.log(numbers); -> [1, 10, 2, 5] -> 숫자를 문자열로 변환해서 정렬
+
+            // 음수: 첫 번째 요소가 두 번째 요소보다 작으면(앞에 위치하면) 음수를 반환.
+            // 0: 두 요소가 같으면 0을 반환.
+            // 양수: 첫 번째 요소가 두 번째 요소보다 크면(뒤에 위치하면) 양수를 반환.
+
+            // 숫자 오름차순 정리
+            numbers.sort((a, b) => a - b);
+            console.log(numbers);
+
+            // 숫자 내림차순 정리
+            numbers.sort((a, b) => b - a);
+            console.log(numbers);
+        </script>
+    </body>
+</html>

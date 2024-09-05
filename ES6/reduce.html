@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 배열고차함수 reduce : 배열의 각 요소들을 주어진 콜백에 맞게 합산, 누적하여 하나의 결과값을 반환하는 함수
+            // reduce에 들어가는 callback
+            // callback(accumulator, currentValue)
+            // accumulator: 어떤 데이터를 계속 쌓아가는 변수
+            // currentValue: 현재 루프회차에서 사용할 데이터
+            // reduce는 반복을 실행할때마다 currentValue를 accumulator에 누적함
+
+            const numbers = [10, 20, 30, 40, 50, 60];
+
+            const result = numbers.reduce((a, b) => {
+                console.log(a);
+                console.log(b);
+                console.log("====================");
+                return a + b;
+            }, 0);
+            // reduce의 콜백함수 다음파라미터는 initialValue를 의미하며
+            // 반복문의 accumulator시작값을 의미함
+            // 따라서 0을 시작값으로 두고 return a + b; 를 하면
+            // 0 + 1 + 2 + 3 + 4 + 5 + 6
+            // 시작값을 없애면 accumulator의 시작값이 0번인덱스로 지정되며
+            // 1 + 2 + 3 + 4 + 5 + 6
+
+            /*
+            10  -> return값 (합), 초기값()은 인덱스로 지정하는데 지정을 안하면 0번 인덱스부터 돌기 시작함 (0으로라도 초기화 해주는것이 좋음)
+            20  -> 리스트 요소
+            ====================
+            30  -> return값 (합)
+            30  -> 리스트 요소
+            ====================
+            60  -> return값 (합)
+            40  -> 리스트 요소
+            ====================
+            100 -> return값 (합)
+            50  -> 리스트 요소
+            ====================
+            150 -> return값 (합)
+            60  -> 리스트 요소
+            ====================
+            210 -> return값 (합)
+                -> 리스트 요소, 다음 요소가 없음
+            */
+
+            console.log(result);
+        </script>
+    </body>
+</html>
