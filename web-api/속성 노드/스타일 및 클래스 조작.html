@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+                background: orange;
+                font-size: 20px;
+                color: red;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .green {
+                color: greenyellow;
+                background: green;
+            }
+            .blue {
+                color: aqua;
+                background: blue;
+            }
+            .circle {
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box green" style="font-weight: bold">Hello</div>
+
+        <button id="add">변환</button>
+
+        <script>
+            const $box = document.querySelector(".box");
+            const $btn = document.getElementById("add");
+
+            // 클래스 조작
+            // $box.setAttribute('class', 'box blue');
+            // $box.className = "box blue";
+            // $box.className = "box blue circle";
+
+            // 클래스 추가
+            $box.classList.add("circle");
+            $box.classList.add("aaa", "bbb", "ccc");
+
+            // 클래스 변경
+            $box.classList.replace("green", "blue");
+
+            // 클래스 제거
+            $box.classList.remove("aaa");
+            $box.classList.remove("bbb", "ccc");
+
+            // 클래스 존재 유무
+            console.log($box.classList.contains("box"));
+            console.log($box.classList.contains("aaa"));
+
+            // $
+            $btn.addEventListener("click", () => {
+                // 현재 박스가 네모 모양이면 원으로 비꾸고, 원이면 네모로 바꾸기
+                /*
+                if ($box.classList.contains("circle")) {
+                    $box.classList.remove("circle");
+                } else {
+                    $box.classList.add("circle");
+                }
+                */
+                // 더 간단한 방식
+                // $box.classList.toggle("circle");
+            });
+
+            // style 프로퍼티로 지정한 스타일은 인라인으로 적용.
+            // -으로 연결된 css 속성은 카멜표기법으로 작성해야 함
+            $box.style.fontSize = "2em";
+            $box.style.background = "dodgerblue";
+        </script>
+    </body>
+</html>
