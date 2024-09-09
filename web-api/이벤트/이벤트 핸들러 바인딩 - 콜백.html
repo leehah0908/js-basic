@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+                background: orange;
+                margin: 20px;
+            }
+            .green {
+                background: yellowgreen;
+                font-size: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .red {
+                background: red;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="btn">버튼</button>
+
+        <script>
+            const $btn = document.getElementById("btn");
+
+            // 이벤트 핸들러
+            const helloHandler = () => alert("Hello");
+
+            // addEventListener(이벤트 타입, 핸들러 -> 콜백)
+            $btn.addEventListener("click", helloHandler);
+
+            $btn.addEventListener("click", function () {
+                alert("하세요");
+            });
+        </script>
+    </body>
+</html>
