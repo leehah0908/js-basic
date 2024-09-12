@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <a id="link" href="https://leehah0908.tistory.com/">블로그로 이동</a>
+
+        <script>
+            const $link = document.getElementById("link");
+
+            $link.addEventListener("click", (e) => {
+                // confirm은 확인/취서 버튼으로 이루어진 알림창
+                // 확인을 누르면 true가, 취소를 누르면 false가 리턴됨
+                if (!confirm("블로그로 이동하시겠습니까?")) {
+                    e.preventDefault(); // 태그의 고유기능 죽이기
+                }
+            });
+        </script>
+    </body>
+</html>
